@@ -1,6 +1,5 @@
 [user]
 	name = David Piegza
-	useconfigonly = true
 
 [alias]
 	# Shortcuts
@@ -25,6 +24,9 @@
 
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
+
+	# Push with force-with-lease option set
+	pf = push --force-with-lease
 
 	# Clone a repository including all submodules
 	c = clone --recursive
@@ -99,3 +101,9 @@
 
 [push]
 	default = simple
+
+[pull]
+	rebase = true
+
+[rebase]
+	autosquash = true
