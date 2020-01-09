@@ -49,3 +49,17 @@ complete -W "NSGlobalDomain" defaults
 
 # rbenv
 eval "$(rbenv init -)"
+
+killport() {
+  lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9
+	[[ $# -eq 0 ]] && echo "Usage: killport [PORT]"
+}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+# direnv
+eval "$(direnv hook bash)"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
