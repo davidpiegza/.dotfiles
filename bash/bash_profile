@@ -1,7 +1,12 @@
 echo "Loading .bash_profile"
 
 # Add `~/bin` to the `$PATH`
-export PATH="/usr/local/bin:$HOME/bin:/usr/local/heroku/bin:$HOME/.node/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/bin:$HOME/.node/bin:/usr/local/heroku/bin:/usr/local/opt/node@12/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
+
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -19,6 +24,8 @@ shopt -s histappend
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
+
+HISTIGNORE="clear:bg:fg:cd:cd -:exit"
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
@@ -47,5 +54,10 @@ complete -W "NSGlobalDomain" defaults
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
-# rbenv
-eval "$(rbenv init -)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+# asdf version manager
+export ASDF_DATA_DIR="/usr/local/var/asdf"
+. /usr/local/opt/asdf/asdf.sh
