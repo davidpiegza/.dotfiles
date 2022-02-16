@@ -1,7 +1,7 @@
 echo "Loading .bash_profile"
 
 # Add `~/bin` to the `$PATH`
-export PATH="/usr/local/bin:$HOME/bin:$HOME/.node/bin:/usr/local/heroku/bin:/usr/local/opt/node@12/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@12/bin:/usr/local/bin:$HOME/bin:$HOME/.node/bin:/usr/local/heroku/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
