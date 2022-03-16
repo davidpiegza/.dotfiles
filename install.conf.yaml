@@ -13,3 +13,4 @@
     ~/.git_completion: bash/git_completion
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
+    ~/.zshrc: zsh/zshrc
