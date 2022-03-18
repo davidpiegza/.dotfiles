@@ -7,10 +7,10 @@
 - clean: ['~']
 
 - link:
-    ~/.bash_profile: bash/bash_profile
-    ~/.bash_prompt: bash/bash_prompt
-    ~/.aliases: bash/aliases
-    ~/.git_completion: bash/git_completion
+    ~/.bash_profile: shell/bash_profile
+    ~/.bash_prompt: shell/bash_prompt
+    ~/.aliases: shell/aliases
+    ~/.git_completion: shell/git_completion
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
-    ~/.zshrc: zsh/zshrc
+    ~/.zshrc: shell/zshrc

@@ -88,10 +88,10 @@ unamestr=`uname`
 
 # Load OS X specific aliases
 if [[ "$unamestr" == "Darwin" ]]; then
-	source ~/.dotfiles/bash/os_x/aliases
+	source ~/.dotfiles/shell/os_x/aliases
 fi
 
 # Load Linux specific aliases
 if [[ "$unamestr" == "Linux" ]]; then
-	source ~/.dotfiles/bash/linux/aliases
+	source ~/.dotfiles/shell/linux/aliases
 fi
